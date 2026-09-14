@@ -1,0 +1,4 @@
+- generic [active] [ref=e1]:
+  - heading "ブロック崩し" [level=1] [ref=e2]
+  - generic [ref=e3]: "Score: 0 / Lives: 3"
+  - paragraph [ref=e5]: ← → キーまたはマウスでパドルを操作、スペースキーでスタート/一時停止
