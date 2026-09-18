@@ -57,14 +57,14 @@ jobs:
                - Use ./scripts/edit-issue-labels.sh --add-label LABEL1 --add-label LABEL2 to apply your selected labels (issue number is read from the workflow event)
                - DO NOT post any comments explaining your decision
                - DO NOT communicate directly with users
-               - If no labels are clearly applicable, do not apply any labels
+              - You MUST run ./scripts/gh.sh label list first, then apply at least one label using ./scripts/edit-issue-labels.sh. Do not finish without running these commands.
+              - If the issue describes something broken, failing, or not working, apply "bug".
 
             IMPORTANT GUIDELINES:
             - Be thorough in your analysis
             - Only select labels from the provided list above
             - DO NOT post any comments to the issue
             - Your ONLY action should be to apply labels using ./scripts/edit-issue-labels.sh
-            - It's okay to not add any labels if none are clearly applicable 
               show_full_output: true
               claude_args: '--allowedTools "Bash(./scripts/gh.sh:*),Bash(./scripts/edit-issue-labels.sh:*)"'
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
