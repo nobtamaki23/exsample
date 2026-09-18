@@ -65,8 +65,8 @@ jobs:
             - Only select labels from the provided list above
             - DO NOT post any comments to the issue
             - Your ONLY action should be to apply labels using ./scripts/edit-issue-labels.sh
-              show_full_output: true
-              claude_args: '--allowedTools "Bash(./scripts/gh.sh:*),Bash(./scripts/edit-issue-labels.sh:*)"'
+          show_full_output: true
+          claude_args: '--allowedTools "Bash(./scripts/gh.sh:*),Bash(./scripts/edit-issue-labels.sh:*)"'
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           allowed_non_write_users: "*" # Required for issue triage workflow, if users without repo write access create issues
           github_token: ${{ secrets.GITHUB_TOKEN }}
